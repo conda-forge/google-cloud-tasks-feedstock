@@ -1,5 +1,5 @@
 {% set name = "google-cloud-tasks" %}
-{% set version = "2.7.0" %}
+{% set version = "2.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-tasks-{{ version }}.tar.gz
-  sha256: 8d770a0f0d1297868af20bd73182a11a7318c6543defb98cc9b0a4e550fb08d0
+  sha256: 2fd2222901a7d8ba65f28f9019cb41f5d4c952d012f020bdde105527a3f5ae43
 
 build:
   number: 0
@@ -20,9 +20,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - google-api-core-grpc >=1.26.0,<3.0.0dev
+    - google-api-core-grpc >=1.28.0,<3.0.0dev
     - grpc-google-iam-v1 >=0.12.3,<0.13dev
-    - packaging >=14.3
     - proto-plus >=0.4.0
 
 test:
