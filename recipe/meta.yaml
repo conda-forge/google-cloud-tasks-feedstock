@@ -20,9 +20,8 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - google-api-core-grpc >=1.26.0,<3.0.0dev
+    - google-api-core-grpc >=1.28.0,<3.0.0dev
     - grpc-google-iam-v1 >=0.12.3,<0.13dev
-    - packaging >=14.3
     - proto-plus >=0.4.0
 
 test:
