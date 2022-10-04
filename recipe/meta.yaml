@@ -1,5 +1,5 @@
 {% set name = "google-cloud-tasks" %}
-{% set version = "2.10.2" %}
+{% set version = "2.10.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-tasks-{{ version }}.tar.gz
-  sha256: f6f01498ad461b4e9f34af9ddd631186ddbfec5b5acf9e9e73dc703f9797c435
+  sha256: 888097d8d6b715080e333c7947aeac2a04cfad5799124e687cf04f29059146fd
 
 build:
   number: 0
