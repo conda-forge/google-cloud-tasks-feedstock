@@ -9,7 +9,7 @@ Package license: Apache-2.0
 
 Summary: Google Cloud Tasks API client library
 
-Development: https://github.com/googleapis/python-tasks
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-tasks
 
 Documentation: https://googleapis.dev/python/cloudtasks/latest/index.html
 
