@@ -1,5 +1,5 @@
 {% set name = "google-cloud-tasks" %}
-{% set version = "2.19.0" %}
+{% set version = "2.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 488ef92ef742bf279b255460949c82aefd459f1ce0881023d9e3733ac7c75b2d
+  sha256: c2f22a7dd315369dc2ff76a98d1f5dfda877970ada28d829a149cbe7b1463c06
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     # more restrictive version for python 3.13
     - proto-plus >=1.25.0,<2.0.0dev
     - protobuf >=3.20.2,<6.0.0dev,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
-    - grpc-google-iam-v1 >=0.12.4,<1.0.0dev
+    - grpc-google-iam-v1 >=0.14.0,<1.0.0dev
 
 test:
   imports:
