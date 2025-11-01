@@ -1,5 +1,5 @@
 {% set name = "google-cloud-tasks" %}
-{% set version = "2.19.3" %}
+{% set version = "2.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_cloud_tasks-{{ version }}.tar.gz
-  sha256: e9da534f3793e0de37f9a3b34ac3647420865ca726c0ac72148c4f721c4894d6
+  sha256: 733cf440a25d34fe1cdb4e6c946d173bd83a2c22c3d7b2c76a24591f3c160412
 
 build:
   noarch: python
@@ -20,10 +20,13 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    # excluding python 3.14 for now because we don't have the required grpcio on conda-forge
+    - python >={{ python_min }},<3.14
     - google-api-core >=1.34.1,<3.0.0,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,!=2.10.*
     - google-api-core-grpc
     - google-auth >=2.14.1,<3.0.0,!=2.24.0,!=2.25.0
+    # using looser constraint because we can't support the python >=3.14 constraint
+    - grpcio >=1.33.2,<2.0.0
     # more restrictive version for python 3.13
     - proto-plus >=1.25.0,<2.0.0
     - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
