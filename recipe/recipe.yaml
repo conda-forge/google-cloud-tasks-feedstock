@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-tasks
-  version: 2.20.0
+  version: "2.21.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_cloud_tasks-${{ version }}.tar.gz
-  sha256: 733cf440a25d34fe1cdb4e6c946d173bd83a2c22c3d7b2c76a24591f3c160412
+  sha256: d28f33248553faf0ff029e1981aab56cd13bd933635c3bc33aa187675e7e14d1
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
