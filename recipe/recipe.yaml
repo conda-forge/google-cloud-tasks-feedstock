@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-tasks
-  version: "2.24.0"
+  version: "2.25.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_cloud_tasks-${{ version }}.tar.gz
-  sha256: aa4f8764e5b157cbab81af619cc4fd9f14ebece8b69e5394a657c328a8366228
+  sha256: 51e1b91818925124c3ef728019b140f0d4a5068d871f0f27a17c6da80332f1e4
 
 build:
   number: 0
